@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>テストサイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/fakeLoader.css" rel="stylesheet">
+
+  <!--Font-->
+  <link href='https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+  <div id="fakeLoader"></div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/fakeLoader.min.js"> </script>
+  <script type="text/javascript">
+    $("#fakeLoader").fakeLoader({
+      timeToHide: 600, //Time in milliseconds for fakeLoader disappear
+      zIndex: 999, // Default zIndex
+      spinner: "spinner2",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
+      bgColor: "#c0c0c0", //Hex, RGB or RGBA colors
+      //imagePath:"yourPath/customizedImage.gif" //If you want can you insert your custom image
+    });
+  </script>
+
+  <!--上から出てくるヘッダ（内容同じ）-->
+  <div class="fix-header">
+    <div class="fix-header-contents">
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/MikuMikuOpenWorld-logo.png" width="80%" height="80%" class="img-fluid" alt="...">
+          </a>
+
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavfix" aria-controls="navbarNavfix"
+            aria-expanded="false" aria-label="">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavfix">
+            <div class="navbar-nav ml-auto mt-5">
+              <a class="nav-item nav-link active pr-3 text-nav-index" href="#">Home
+                <span class="sr-only">(現位置)</span>
+              </a>
+              <a class="nav-item nav-link pr-3 text-nav-index" href="#">News</a>
+              <a class="nav-item nav-link pr-3 text-nav-index" href="#">Download</a>
+              <a class="nav-item nav-link pr-3 text-nav-index" href="#">Contact</a>
+            </div>
+            <div style="padding-top: 42px; padding-left: 10px;">
+              <button type="button" class="btn btn-primary badge-pill">ユーザー登録</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+
+  <div class="rellax" data-rellax-speed="-5">
+    <div class="title">
+      <div class="demo"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/MikuMikuOpenWorld-logo.png" width="80%" height="80%" class="img-fluid" alt="...">
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ml-auto mt-5">
+          <a class="nav-item nav-link active pr-3 text-nav-index" href="#">Home
+            <span class="sr-only">(現位置)</span>
+          </a>
+          <a class="nav-item nav-link pr-3 text-nav-index" href="#">News</a>
+          <a class="nav-item nav-link pr-3 text-nav-index" href="#">Download</a>
+          <a class="nav-item nav-link pr-3 text-nav-index" href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="rellax" data-rellax-speed="-5">
+      <div class="row" style="padding-top: 100px">
+        <div class="col-md-8">
+          <h1 class="h text-center">コンセプト的なもの</h1>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <p class="text-left">楽しむ</p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col text-center">
+          <div style="padding-top: 100px">
+            <button type="button" class="btn btn-primary badge-pill btn-lg">ユーザー登録</button>
+          </div>
+          <a href="#" id="scrolldown">
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contents">
+    <div class="contents_inner">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="h2">News</h2>
+            <div class="col text-center">
+              <div style="padding-top: 100px">
+                <button type="button" class="btn btn-outline-secondary badge-pill btn-sm active">全て</button>
+                <button type="button" class="btn btn-outline-danger badge-pill btn-sm">メンテナンス</button>
+                <button type="button" class="btn btn-outline-success badge-pill btn-sm">更新</button>
+                <button type="button" class="btn btn-outline-info badge-pill btn-sm">案内</button>
+              </div>
+            </div>
+            <div class="w-100 pt-5"></div>
+            <div class="col text-left">
+              <div class="card-columns">
+                <div class="card border-danger">
+                  <div class="card-body">
+                    <h4 class="card-title text-danger">緊急メンテナンス</h4>
+                    <p class="card-text">2018/xx/xx～から2018/xx/xxまで緊急メンテナンスを行います。</p>
+                    <a href="#" class="card-link">もっと見る</a>
+                    <p class="card-text">
+                      <small class="text-muted">2018/09/17</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="card border-success">
+                  <div class="card-body">
+                    <h4 class="card-title text-success">バージョンx.x.xリリース</h4>
+                    <p class="card-text">テスト</p>
+                    <a href="#" class="card-link">もっと見る</a>
+                    <p class="card-text">
+                      <small class="text-muted">2018/09/10</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="card border-info">
+                  <div class="card-body">
+                    <h4 class="card-title text-info">アカウントの乗っ取りにご注意ください</h4>
+                    <p class="card-text">てすと</p>
+                    <a href="#" class="card-link">もっと見る</a>
+                    <p class="card-text">
+                      <small class="text-muted">2018/09/10</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="card border-secondary">
+                  <div class="card-body">
+                    <h4 class="card-title text-secondary">その他</h4>
+                    <p class="card-text">他</p>
+                    <a href="#" class="card-link">もっと見る</a>
+                    <p class="card-text">
+                      <small class="text-muted">2018/09/10</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col">
+          <h2>MikuMikuOpenWorldとは？</h2>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-md-6">
+          <p>MikuMikuDanceを始めとするコンテンツにゲームに使えそうなものが多くあります。 そのような既存の素材を利用し、オープンワールドのゲームを作ろうというものです
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <script type="application/javascript" src="https://embed.nicovideo.jp/watch/sm18859526/script?w=640&h=360"></script>
+            <noscript>
+              <a href="http://www.nicovideo.jp/watch/sm18859526">【MMDで】オンラインチャットツール的なもの作ってみた</a>
+            </noscript>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col">
+          <p>もっともっと説明</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row">
+          <div class="col">
+            <h2>開発者募集中！！！</h2>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row ">
+        <div class="col text-center">
+          <small class="text-muted">Copyright (C) july. All rights reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRICT -->
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/hex.js"></script>
+  <script>
+    $(document).ready(function () {
+      show_hex();
+    });
+    function show_hex() {
+      $('.demo').css('background', '#fff');
+      $(".demo").hex({ duration: 8, callback: function () { setTimeout("hide_hex()", 5000); } });
+    }
+    function hide_hex() {
+      $('.demo').css('background', '#eee');
+      $(".demo").hex({ show: "false", direction: "left", background: "#fff", duration: 8, callback: function () { setTimeout("show_hex()", 5000); } });
+    }
+  </script>
+  <script src="js/rellax.min.js"></script>
+  <script>
+    var rellax = new Rellax('.rellax');
+  </script>
+  <script src="js/jquery.easeScroll.js"></script>
+  <script>
+    var ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+      // スマートフォン用コード
+    } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+      // タブレット用コード
+    } else {
+      // PC用コード
+      $("html").easeScroll();
+    }
+  </script>
+
+</body>
+</html>

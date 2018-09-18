@@ -1,0 +1,184 @@
+/*
+Global
+============================= */
+
+body{
+	line-height: 1.5;
+	letter-spacing : .1em;
+	text-align: justify;
+	font-family:"Noto Sans Japanese";
+	color:#555;
+	font-size:16px;
+	font-weight: 400;
+	  -webkit-font-smoothing: antialiased;
+     font-smoothing: antialiased;
+}
+
+* {
+     text-shadow: 0 1px 1px rgba(255,255,255,.3);
+}
+
+p{line-height: 24px}
+a{color:#0088cc;}
+a:hover{text-decoration: none;}
+
+h1,h2,h3,h4,h5,h6{ font-family:"Noto Sans Japanese"}
+
+h1{font-size:50px; font-weight: 200; color: #555; margin-bottom: 20px;}
+h2{font-size: 30px; font-weight: 300; color:#444; margin: 30px 0}
+h3{font-size: 20px; font-weight: 400; margin: 20px 0;}
+h4{font-size:18px; font-weight: 400}
+
+.text-nav-index{font-size:20px;}
+
+
+/*Footer
+========================*/
+
+footer{
+border-top:1px solid #eee;
+background: #f5f5f5;
+padding: 30px 0;
+color: #ccc;
+margin-top:40px;
+}
+
+/* 追加 
+========================*/
+
+
+.fix-header {
+background-color:#f8f8f8;
+line-height: 66px;
+top: -66px;/* 上に隠す鷹さ */
+left: 0;
+text-align: center;
+width: 100%;
+margin: 0 auto;
+color: #fff;
+/*padding-top:15px;*/
+position: fixed;
+opacity:0;/* 	最初読み込んだときは透過 */
+z-index: 1000;/*　他のアイテムに対して最上位のレイヤーになるように */
+/*	opacity: 0; */
+}
+
+.fix-header-contents{
+	margin: 0 auto;
+}
+
+div.title{
+	height: 100%;
+	width: 100%;
+	background: #eee;
+  }
+
+.demo {
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: -1;
+	overflow: hidden;
+  }
+
+  .contents {
+	position: relative;
+	overflow: hidden;
+	padding-top: 15%;
+	padding-bottom: 50px;
+  }
+
+  .contents:before  {
+    content: '';
+    background: #fff;
+    height: 13.5vw;
+    width: 200%;
+    left: 50%;
+    margin-left: -100%;
+    margin-top: -6.6vw;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    -webkit-transform: skewY(-7.5deg);
+	transform: skewY(-7.5deg);
+}
+
+.contents_inner {
+	box-sizing: boder-box;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: #fff;
+	text-align: center;
+  }
+
+  .contents_inner:before {
+	content: '';
+	background: #fff;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	z-index: 0;
+  }
+
+  
+  /* スクロール */
+  #scrolldown {
+	position: absolute;
+	top: 120%;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	text-decoration: none;
+  }
+  #scrolldown span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #555;
+	border-bottom: 1px solid #555;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb 1.5s infinite;
+	animation: sdb 1.5s infinite;
+	box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb {
+	0% {
+	  -webkit-transform: rotate(-45deg) translate(0, 0);
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+	  opacity: 0;
+	}
+  }
+  @keyframes sdb {
+	0% {
+	  transform: rotate(-45deg) translate(0, 0);
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  transform: rotate(-45deg) translate(-20px, 20px);
+	  opacity: 0;
+	}
+  }
