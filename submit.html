@@ -9,23 +9,112 @@
   <meta name="author" content="">
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="css/input.css" rel="stylesheet">
 
-    <!--Font-->
-    <link href='https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' rel='stylesheet' type='text/css'>
+  <!--Font-->
+  <link href='https://fonts.googleapis.com/earlyaccess/notosansjapanese.css' rel='stylesheet' type='text/css'>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
+
+</head>
+
+<body style="background: #eee">
+
+  <!--上から出てくるヘッダ（内容同じ）-->
+  <div class="fix-header">
+    <div class="fix-header-contents">
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/MikuMikuOpenWorld-logo.png" width="80%" height="80%" class="img-fluid" alt="...">
+          </a>
+
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavfix" aria-controls="navbarNavfix"
+            aria-expanded="false" aria-label="">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavfix">
+            <div class="navbar-nav ml-auto mt-5">
+              <a class="nav-item nav-link active pr-3 text-nav-index" href="index.html">Home
+                <span class="sr-only">(現位置)</span>
+              </a>
+              <a class="nav-item nav-link pr-3 text-nav-index" href="#">News</a>
+              <a class="nav-item nav-link pr-3 text-nav-index" href="#">Download</a>
+              <a class="nav-item nav-link pr-3 text-nav-index" href="#">Contact</a>
+            </div>
+            <div style="padding-top: 42px; padding-left: 10px;">
+              <a class="btn btn-primary badge-pill" href="submit.html" role="button">ユーザー登録</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/MikuMikuOpenWorld-logo.png" width="80%" height="80%" class="img-fluid" alt="...">
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ml-auto mt-5">
+          <a class="nav-item nav-link active pr-3 text-nav-index" href="index.html">Home
+            <span class="sr-only">(現位置)</span>
+          </a>
+          <a class="nav-item nav-link pr-3 text-nav-index" href="#">News</a>
+          <a class="nav-item nav-link pr-3 text-nav-index" href="#">Download</a>
+          <a class="nav-item nav-link pr-3 text-nav-index" href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   
-  </head>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="h2">ユーザー登録</h1>
+      </div>
+    </div>
+  </div>
 
-  <body style="background: #fff">
-    <input type="text" placeholder="Type for pixie dust..."/>
+  <section class="contents">
+    <div class="contents_inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 ">
+            <p class="text-right" style="font-size:20px; margin: 0; margin-top: 8px;">email</p>
+          </div>
+          <div class="col-md-8">
+            <input type="text" id="email"/>
+            <small class="text-muted d-block">あなたのメールは他の誰とも共有しません。</small>
+          </div>
+          <div class="w-100" style="margin-top: 15px;"></div>
+          <div class="col-md-4 ">
+              <p class="text-right" style="font-size:20px; margin: 0; margin-top: 8px;">password</p>
+            </div>
+            <div class="col-md-8">
+              <input type="password" id="pass"/>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/input.js"></script>
-  </body>
-  </html>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
