@@ -41,6 +41,11 @@ async function signOut() {
 
 async function sendEmail() {
   try {
+    if($("#reqest option:selected").text() == '')return;
+    if( $('#name').val() == '')return;
+    if( $('#mail').val()  == '')return;
+    if($('#context').val() == '')return;
+
     // 送りたいメールアドレスに書き換えてください。
     const to = 'july1997@outlook.jp';
     const subject = 'お問い合わせ : ' + $("#reqest option:selected").text();
