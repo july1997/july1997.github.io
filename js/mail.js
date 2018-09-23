@@ -47,7 +47,7 @@ async function sendEmail() {
     // 送りたいメールアドレスに書き換えてください。
     const to = 'july1997@outlook.jp';
     const subject = 'お問い合わせ : ' + $("#reqest option:selected").text();
-    const body = '名前 : '+ $('#name').val() + '\nメール : '+ $('#mail').val() + '\n内容 : ' + + $('#context').val();
+    const body = '名前 : '+ $('#name').val() + '\nメール : '+ $('#mail').val() + '\n内容 : ' + $('#context').val();
 
     // サインイン済みかチェック。
     if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
