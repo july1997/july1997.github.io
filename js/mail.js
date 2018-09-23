@@ -83,6 +83,6 @@ async function sendEmail() {
 
 var testCallback = function(code) {
     if(code != ""){
-             $('#sent').attr('disabled',false);
+      $('#sent').attr('disabled',false);
     }
 };
