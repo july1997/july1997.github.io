@@ -3,6 +3,8 @@ const CLIENT_ID = '361625052892-1u48d2n9trgmu5lvc7se3tku6dj45t5l.apps.googleuser
 
 async function onLoad() {
   try {
+    $('#step2').hide();
+
     // Google APIs Client Libraryの初期化。
     await gapi.load('client:auth2');
     await gapi.client.init({
@@ -11,6 +13,12 @@ async function onLoad() {
     });
     await gapi.client.load('gmail', 'v1');
     console.log('Initialized');
+
+    // サインイン済みかチェック。
+    if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+        $('#step1').hide();
+        $('#step2').show();
+    }    
   } catch (e) {
     console.error(e);
   }
@@ -37,9 +45,9 @@ async function signOut() {
 async function sendEmail() {
   try {
     // 送りたいメールアドレスに書き換えてください。
-    const to = 'example@example.com';
-    const subject = 'テスト';
-    const body = 'これはテストです。';
+    const to = 'july1997@outlook.jp.';
+    const subject = 'お問い合わせ : ' + $('#reqest').test();
+    const body = '名前 : '+ $('#name').val() + '\nメール : '+ $('#mail').val() + '\n内容 : ' + + $('#body').val();
 
     // サインイン済みかチェック。
     if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
