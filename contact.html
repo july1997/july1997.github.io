@@ -92,20 +92,44 @@
         </div>
     </div>
 
+    <!-- モーダルの設定 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">お問い合わせ完了</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>送信しました。<br>返信の必要のある内容につきましては、後ほど対応いたします。折り返しのメールをお待ち下さい。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+                <!-- /.modal-footer -->
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
     <section class="contents">
         <div class="contents_inner">
             <div class="container">
                 <div class="row" id="step1">
-                        <div class="col">
+                    <div class="col">
                         <p class="text-center " style="font-size:20px;">ログインが必要です。</p>
                     </div>
                     <div class="w-100 " style="margin-top: 15px; "></div>
                     <div class="col">
-                        <input type="submit" class="btn btn-primary" onclick=" signIn() "  value="ログインする">
+                        <input type="submit" class="btn btn-primary" onclick=" signIn() " value="ログインする">
                     </div>
                     <div class="w-100 " style="margin-top: 15px; "></div>
                     <div class="col text-right">
-                        <input type="submit" class="btn btn-secondary btn-sm" onclick=" signOut() "  value="ログアウト">
+                        <input type="submit" class="btn btn-secondary btn-sm" onclick=" signOut() " value="ログアウト">
                     </div>
                     <div class="w-100 " style="margin-top: 15px; "></div>
                 </div>

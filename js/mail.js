@@ -73,7 +73,8 @@ async function sendEmail() {
       'resource': {raw: raw},
     });
     console.log('Sent email');
-
+    $('#myModal').modal();
+    
   } catch (e) {
     console.error(e);
   }
