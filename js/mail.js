@@ -12,7 +12,6 @@ async function onLoad() {
         scope: 'https://www.googleapis.com/auth/gmail.send'
     });
     await gapi.client.load('gmail', 'v1');
-    console.log('Initialized');
 
     // サインイン済みかチェック。
     if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
@@ -27,7 +26,6 @@ async function onLoad() {
 async function signIn() {
   try {
     await gapi.auth2.getAuthInstance().signIn();
-    console.log('Signed in');
   } catch (e) {
     console.error(e);
   }
@@ -36,7 +34,6 @@ async function signIn() {
 async function signOut() {
   try {
     await gapi.auth2.getAuthInstance().signOut();
-    console.log('Signed out');
   } catch (e) {
     console.error(e);
   }
@@ -72,10 +69,15 @@ async function sendEmail() {
       'userId': 'me',
       'resource': {raw: raw},
     });
-    console.log('Sent email');
     $('#myModal').modal();
-    
+
   } catch (e) {
     console.error(e);
   }
 }
+
+var testCallback = function(code) {
+    if(code != ""){
+             $('#sent').attr('disabled',false);
+    }
+};
