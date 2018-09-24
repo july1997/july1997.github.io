@@ -3,7 +3,7 @@ const CLIENT_ID = '361625052892-1u48d2n9trgmu5lvc7se3tku6dj45t5l.apps.googleuser
 
 async function onLoad() {
   try {
-    $('#step1').hide();
+    $('#step2').hide();
 
     // Google APIs Client Libraryの初期化。
     await gapi.load('client:auth2');
