@@ -19,23 +19,33 @@ async function onLoad() {
         $('#step2').show();
     }    
   } catch (e) {
-    console.error(e);
+    $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">' + e + '</p>');
+    $('#ErrorModal').modal();
   }
 }
 
 async function signIn() {
   try {
     await gapi.auth2.getAuthInstance().signIn();
+   // サインイン済みかチェック。
+   if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
+    $('#step1').hide();
+    $('#step2').show();
+    }    
   } catch (e) {
-    console.error(e);
+    $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">' + e + '</p>');
+    $('#ErrorModal').modal();
   }
 }
 
 async function signOut() {
   try {
     await gapi.auth2.getAuthInstance().signOut();
+    // 現在表示されているページをリロードする
+    location.reload();
   } catch (e) {
-    console.error(e);
+    $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">' + e + '</p>');
+    $('#ErrorModal').modal();
   }
 }
 
@@ -53,7 +63,8 @@ async function sendEmail() {
 
     // サインイン済みかチェック。
     if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
-      console.error('Sign in first');
+      $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">ログインしてください。</p>');
+      $('#ErrorModal').modal();
       return;
     }
 
@@ -77,7 +88,8 @@ async function sendEmail() {
     $('#myModal').modal();
 
   } catch (e) {
-    console.error(e);
+    $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">' + e + '</p>');
+    $('#ErrorModal').modal();
   }
 }
 
@@ -86,3 +98,7 @@ var testCallback = function(code) {
       $('#sent').attr('disabled',false);
     }
 };
+
+$('#modalOK').on('click', function(){
+  location.reload();
+});

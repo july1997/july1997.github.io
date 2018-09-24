@@ -107,13 +107,28 @@
                         <br>返信の必要のある内容につきましては、後ほど対応いたします。折り返しのメールをお待ち下さい。</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="modalOK">OK</button>
                 </div>
-                <!-- /.modal-footer -->
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="ErrorModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">エラー</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-denger">エラーが発生しました。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.modal -->
 
