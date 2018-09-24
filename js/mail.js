@@ -88,7 +88,8 @@ async function sendEmail() {
     $('#myModal').modal();
 
   } catch (e) {
-    $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">' + e + '</p>');
+    console.log(e.messages);
+    $('#ErrorModal').find('.modal-dialog').find('.modal-body').html('<p class="text-denger">Google Gmailアカウントがない場合は送信できません。</p>');
     $('#ErrorModal').modal();
   }
 }
