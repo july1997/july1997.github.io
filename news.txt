@@ -1,0 +1,18 @@
+success
+バージョンβ0.0.3更新
+サーバー変更に伴い更新　変更点は以下を御覧ください
+https://github.com/july1997/MikuMikuOpenWorld/releases
+もっと見る
+2018/09/25
+success
+バージョンβ0.0.3リリース
+バージョンβ0.0.3　変更点は以下を御覧ください
+https://github.com/july1997/MikuMikuOpenWorld/releases
+もっと見る
+2018/02/25
+info
+サーバー接続情報
+現在サーバー稼働中！<br>接続情報 : AWS
+#
+もっと見る
+2018/09/23
